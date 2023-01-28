@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+
+    <title>Django Project | Login</title>
+     
+  </head>
+  <body style="background: url({% static 'nasa.jpg' %})">
+    <div>
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="background-color: #80ffcc">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand bg-light mx-3 p-2" style="border-radius:20px;width: auto;" href="#"><b>Shopsy</b></a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              </ul>
+            <button class="btn btn-light mx-5">
+              <a href="/user/admin_logout" style="text-decoration:none;color:black;">LogOut</a>
+            </button>
+            
+            
+           
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="mt-4"><center style="color:black;background-color: white;border-radius: 10px;"><h1>Welcome Admin</h1></center></div>
+      <div class=" p-5"> 
+        <div class="row mt-5">
+          <div class="col-6">
+            <center>            
+              <h3 style="color:black;background-color: white;border-radius: 10px;">
+                Total Users : {{tot_user}}
+              </h3>
+            </center>
+          </div>
+
+          
+          
+          <div class="col-6">
+            <center> 
+              <h3 style="color:black;background-color: white;border-radius: 10px;">
+                Total Items :{{tot_item}}
+              </h3>
+          </center>
+          </div>
+          
+        </div>
+      </div>  
+      <div class="row">
+        <center><div class="btn"style="background-color: #70dbdb;text-decoration: none; color:black"><h4><a href="/user/sales_history" style="text-decoration:none;color:black;"><h4>Sales History</h4></a></div></center>
+      </div>
+        <!-- <div>
+        </div>
+        <div>
+        </div> -->
+      
+      <div class="row mt-5">
+          <div class="col-3">        
+            <center>            
+              <a href="/user/add_item" class="btn btn-primary" style="background-color: #70dbdb;text-decoration: none; color:black"><h4> Add Items</h4></a>               
+            </center>             
+          </div>
+          
+          <div class="col-3">        
+            <center>            
+              <a href="/user/admin_search" class="btn btn-primary" style="background-color: #70dbdb;text-decoration: none; color:black"><h4>Search Items</h4> </a>               
+            </center>             
+          </div>
+          
+          <div class="col-3">        
+            <center>            
+              <a href="/user/show_all_user" class="btn btn-primary" style="background-color: #70dbdb;text-decoration: none; color:black"><h4> Show Users</h4> </a>               
+            </center>             
+          </div>
+          <div class="col-3">        
+            <center>            
+              <a href="/user/show_all_items" class="btn btn-primary" style="background-color: #70dbdb;text-decoration: none; color:black"><h4> Show Items</h4> </a>               
+            </center>             
+          </div>
+        </div>
+     
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<!-- <center><h1>Welcome {{user}}</h1></center> -->
